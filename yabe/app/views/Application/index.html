@@ -1,0 +1,51 @@
+#{extends 'main.html' /}
+#{set title:'bry-Home' /}
+
+#{if frontPost}
+
+    #{display post:frontPost, as:'home' /}
+
+    #{if olderPosts.size()}
+        <div class="older-posts">
+            <h3>Older posts <span class="from">from this blog</span></h3>
+
+            #{list items:olderPosts, as:'oldPost'}
+            #{display post:oldPost, as:'teaser' /}
+            #{/list}
+        </div>
+    #{/if}
+
+#{/if}
+
+#{else}
+<div class="empty">
+    There is currently nothing to read here.
+</div>
+#{/else}
+
+
+<!-- testing: PLAY FRAMEWORK PRACTICE -bry START-->
+<br>
+<br>
+<p>**********************************************************************************************</p>
+<h2>testing: PLAY FRAMEWORK PRACTICE -bry</h2>
+<br>
+<div class="testing">
+    #{testtagbry try: frontPost/}
+</div>
+
+<br>
+<div class="testing template 2">
+    #{testtagbry2 try: frontPost, testcolor: 'red'/}
+</div>
+
+<!--TESTING CODE -bry START-->
+<div>
+    <p>Test Message from application config</p>
+    <p>${bryName}</p>
+    <p>${bryTest}</p>
+</div>
+<!--TESTING CODE -bry END-->
+
+<p>**********************************************************************************************</p>
+<!-- testing: PLAY FRAMEWORK PRACTICE -bry END-->

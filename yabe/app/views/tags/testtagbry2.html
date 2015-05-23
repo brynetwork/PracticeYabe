@@ -1,0 +1,35 @@
+*{Test tag get any value then output something . . . (^^,) . . . test#2}*
+
+<div class="haha">
+    <h3>USER INFORMATION TEST TAG -BRY</h3>
+    #{if _testcolor == 'red'}
+    <div class="testRED">
+        <strong>
+            <font color="red">
+                <p>${_try.title}</p>
+                <p>${_try.author.fullname}</p>
+                <p>${_try.author.email}</p>
+                <p>${_try.author.password}</p>
+            </font>
+        </strong>
+    </div>
+    #{/if}
+
+    #{if _testcolor == 'blue'}
+    <div class="testBLUE">
+        <strong>
+            <font color="blue">
+                <p>${_try.title}</p>
+                <p>${_try.author.fullname}</p>
+                <p>${_try.author.email}</p>
+                <p>${_try.author.password}</p>
+            </font>
+        </strong>
+    </div>
+    #{/if}
+
+
+
+</div>
+
+
