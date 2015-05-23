@@ -20,9 +20,15 @@ POST    /posts/{postId}/comments                Application.postComment
 # List all tags in a post
 GET     /posts/{tag}                            Application.listTagged
 
-
 # Import CRUD routes
+*      /admin                                   module:crud
+
+# Administration
+GET     /admin/?                                Admin.index
 *       /admin                                  module:crud
+
+# Import Secure routes
+*       /                                       module:secure
 
 
 # Ignore favicon requests
