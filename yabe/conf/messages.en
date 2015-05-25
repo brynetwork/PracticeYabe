@@ -1,0 +1,6 @@
+# You can specialize this file for each language.
+# For example, for French create a messages.fr file
+#
+
+views.main.tools.login = Log in to write something
+bry.test.internationalLocalisation = Hi %1s! <span> Your blog title is: %2s</span>
